@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from "framer-motion";
 import './App.css';
+import Home from './routes/home';
+import Contact from './routes/contact';
+import Registration from './routes/registration';
+import Confirmation from './routes/confirmation';
 
-function App() {
+export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AnimatePresence>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/contact-us' element={<Contact />} />
+        <Route path='/registration' element={<Registration />} />
+        <Route path='/confirmation' element={<Confirmation />} />
+      </Routes>
+    </AnimatePresence>
+  )
 }
-
-export default App;
