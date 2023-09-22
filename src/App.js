@@ -5,7 +5,6 @@ import './App.css';
 import Home from './routes/home';
 import Contact from './routes/contact';
 import Registration from './routes/registration';
-import Confirmation from './routes/confirmation';
 
 export default function App() {
   const location = useLocation();
@@ -20,7 +19,6 @@ export default function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='/registration' element={<Registration />} />
-        <Route path='/confirmation' element={<Confirmation />} />
       </Routes>
     </AnimatePresence>
   )

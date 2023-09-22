@@ -1,11 +1,11 @@
 import React from 'react'
 import Logo from '../assets/img/logo.png'
-import { Link, useNavigate } from 'react-router-dom'
-import { Link as Scroll } from 'react-scroll'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Buttons from './button'
 
 export default function Navigation() {
     const navigate = useNavigate();
+    const location = useLocation()
     
     return (
         <div className='nav'>
@@ -14,15 +14,39 @@ export default function Navigation() {
             </div>
             <div className='flex-1 flex gap-[121px] items-center'>
                 <div className='flex gap-[56px]'>
-                    <Scroll to='timeline'>
-                        <p className='cursor-pointer text-[16px]'>Timeline</p> 
-                    </Scroll>
-                    <Scroll to='overview'>
-                        <p className='cursor-pointer text-[16px]'>Overview</p> 
-                    </Scroll>
-                    <Scroll to='faq'>
-                        <p className='cursor-pointer text-[16px]'>FAQs</p> 
-                    </Scroll>
+                    <p 
+                        className='cursor-pointer text-[16px]'
+                        onClick={() => {
+                            if (location.pathname ==='/'){
+                                const element = document.querySelector('#timeline')
+                                element.scrollIntoView({ behavior: 'smooth' });
+                            } else{
+                                navigate('/#timeline')
+                            }
+                        }}
+                    >Timeline</p>                     
+                    <p 
+                        className='cursor-pointer text-[16px]'
+                        onClick={() => {
+                            if (location.pathname ==='/'){
+                                const element = document.querySelector('#overview')
+                                element.scrollIntoView({ behavior: 'smooth' });
+                            } else{
+                                navigate('/#overview')
+                            }
+                        }} 
+                    >Overview</p> 
+                    <p 
+                        className='cursor-pointer text-[16px]'
+                        onClick={() => {
+                            if (location.pathname ==='/'){
+                                const element = document.querySelector('#faq')
+                                element.scrollIntoView({ behavior: 'smooth' });
+                            } else{
+                                navigate('/#faq')
+                            }
+                        }}    
+                    >FAQs</p> 
                     <Link to='/contact-us'>
                         <p className='cursor-pointer text-[16px] nav__contact'>Contact</p> 
                     </Link>

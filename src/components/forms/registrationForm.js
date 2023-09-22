@@ -8,7 +8,7 @@ import { useFetchApi } from '../../api/axios'
 import { CircularProgress } from "@mui/material"
 import { groupSizeData } from '../utils/groupSizeData'
 
-export default function RegistrationForm() {
+export default function RegistrationForm({ setSuccess, success }) {
     const { GET_CATEGORY_LIST, CREATE_REGISTRATION_APPLICATION } = useFetchApi();
     const { enqueueSnackbar } = useSnackbar();
     const initialValues = {team_name:'', email:'', phone_number:'', group_size:'', project_topic:'', category:'', privacy_poclicy_accepted:false}
@@ -39,13 +39,7 @@ export default function RegistrationForm() {
             const res = await CREATE_REGISTRATION_APPLICATION(formData);
             if (res?.status === 201) {
                 setLoading(false);
-                enqueueSnackbar('Form submitted successfully!', {
-                    variant: 'success',
-                    anchorOrigin: {
-                        vertical: 'top',
-                        horizontal: 'right',
-                    },
-                });
+                setSuccess(!success);
                 setRegistrationData(initialValues)
             } else {
                 setLoading(false);

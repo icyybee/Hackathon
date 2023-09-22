@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Hero from '../components/hero'
 import Overview from '../components/overview'
@@ -12,6 +13,17 @@ import Privacy from '../components/privacy'
 import Footer from '../components/footer'
 
 export default function Home() {
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.hash) {
+          const targetElement = document.querySelector(location.hash);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+    }, [location]);
+
     return (
         <motion.div
             initial={{opacity: 0, y: 200}}

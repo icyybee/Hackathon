@@ -7,6 +7,7 @@ import Guy from '../assets/img/3d-graphic-designer-showing-thumbs-up-png 1.png'
 import Girl from '../assets/img/1f6b6-2640.png'
 import GuyWalk from '../assets/img/image_processing20200511-10310-13mnlsx.png'
 import RegistrationForm from '../components/forms/registrationForm'
+import Confirmation from '../components/confirmation'
 
 export default function Registration() {
     const [success, setSuccess] = useState(false);
@@ -39,10 +40,11 @@ export default function Registration() {
                             </div>
                         </div>
                         <h1 className='mt-[19px] text-[24px]'>CREATE YOUR ACCOUNT</h1>
-                        <RegistrationForm />
+                        <RegistrationForm setSuccess={setSuccess} success={success}/>
                     </div>
                 </div>
             </div>
+            {success && <Confirmation success={success} setSuccess={setSuccess}/>}
         </motion.div>
     )
 }

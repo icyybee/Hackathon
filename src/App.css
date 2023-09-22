@@ -13,6 +13,7 @@ body {
   font-weight: 400;
   color: #FFF;
   background: #150E28;
+  scroll-behavior: smooth;
 }
 
 .font-montserrat {
@@ -239,6 +240,23 @@ input:focus {
 .registration form input::placeholder {
   color: rgba(255, 255, 255, 0.25);
   font-size: 14px;
+}
+
+.MuiDialog-paper {
+  border-radius: 5px !important;
+  border: 1px solid #D434FE;
+  background: rgba(255, 255, 255, 0.01) !important;
+  padding: 20px 71px 20px 54px;
+  color: #FFF !important;
+  max-width: 699px !important;
+}
+
+.MuiDialogContent-root {
+  padding: 0 !important;
+}
+
+.MuiBackdrop-root {
+  background: rgba(21, 14, 40, 0.93) !important;
 }
 
 /* .App {

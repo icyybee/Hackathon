@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Star from '../assets/img/star pu.png'
+import { useLocation } from 'react-router-dom';
 
 export default function Timeline() {
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.hash) {
+            const targetElement = document.querySelector(location.hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
     return (
-        <div className='section-plain' id='timeline'>
-            <div className='pt-[72px] w-full px-[139px] pb-[109px]'>
+        <div className='section-plain'>
+            <div className='pt-[72px] w-full px-[139px] pb-[109px]' id='timeline'>
                 <div className='text-center w-full items-center flex flex-col'>
                     <h1 className='text-[32px] font-bold font-clash-display mb-3'>Timeline</h1>
                     <h2 className='text-[14px] w-[346px]'>Here is the breakdown of the time we anticipate using for the upcoming event.</h2>

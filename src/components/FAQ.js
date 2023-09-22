@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Manual from '../assets/img/cwok_casual_21 1.png'
 import Star from '../assets/img/star pu.png'
 import StarWhite from '../assets/img/star-opaque.png'
 import Star2 from '../assets/img/star.png'
 import Question from '../assets/img/question.png'
 import Frequent from './frequent'
+import { useLocation } from 'react-router-dom'
 
 export default function Faq() {
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.hash) {
+            const targetElement = document.querySelector(location.hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+    
     return (
-        <div className='section-one border-bt' id='faq'>
-            <div className='flex w-full items-center pl-[219px] pr-[101px] pt-8 pb-16'>
+        <div className='section-one border-bt'>
+            <div className='flex w-full items-center pl-[219px] pr-[101px] pt-8 pb-16' id='faq'>
                 <div className='flex-1 mt-10'>
                     <img src={Star} alt='star' className='w-[26px] h-8 -ml-6 mb-5'/>
                     <h1 className='text-[32px] font-bold font-clash-display w-[253px]'>Frequently Ask <span className='text-secondary'>Question</span></h1>

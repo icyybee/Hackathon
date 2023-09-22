@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Idea from '../assets/img/the big idea 1.png'
 import Star from '../assets/img/sata gra.png'
+import { useLocation } from 'react-router-dom';
 
 export default function Overview() {
+    const location = useLocation()
+    
+    useEffect(() => {
+        if (location.hash) {
+            const targetElement = document.querySelector(location.hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
     return (
-        <div className='section-plain border-bt' id='overview'>
+        <div className='section-plain border-bt'  id='overview'>
             <div className='flex items-center w-full pl-[181px] pr-[167px] pt-[62px] pb-[78px]'>
                 <div className='w-[40%] idea flex flex-col'>
                     <div className='flex gap-8 items-center '>
