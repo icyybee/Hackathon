@@ -304,6 +304,26 @@ input:focus {
   .faq-two::after {
     margin-top: -60%;
   }
+
+  .sponsor::before {
+    content: url(./assets/img/star\ pu-sm.png);
+    margin-top: 0px;
+    margin-left: 22px;
+  }
+
+  .part::after {
+    width: 68.271px;
+    height: 2px;
+    margin-top: 0px;
+  }
+
+  .parts::after {
+    display: none;
+  }
+
+  .part, .parts {
+    width: 100%;
+  }
 }
 
 @media (max-width:1000px) {

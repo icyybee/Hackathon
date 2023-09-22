@@ -39,8 +39,8 @@ export default function Home() {
             <Faq />
             <Timeline />
             <Prizes />  
-            {/* <Sponsors />
-            <Privacy />
+            <Sponsors />
+            {/* <Privacy />
             <Footer />  */}
         </motion.div>
     )
