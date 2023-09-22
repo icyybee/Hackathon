@@ -45,10 +45,10 @@ export default function Criteria() {
                         </p>
                     </div>
                     <div className='w-full flex items-center'>
-                        <div className='w-[90%] flex justify-center desktop:justify-start'>
+                        <div className='w-full flex justify-center desktop:justify-start'>
                             <Buttons padding={'13px 40px'} text={'Read More'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
                         </div>
-                        <div className='desktop:hidden flex-1'>
+                        <div className='desktop:hidden'>
                             <img src={StarWhite} alt='star' className='w-[10px] h-3 self-center '/>
                         </div>
                     </div>

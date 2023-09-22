@@ -290,6 +290,20 @@ input:focus {
   .criteria::before {
     content: '';
   }
+
+  .faq::after,
+  .faq-two::after {
+    content: url(./assets/img/sata\ gra3.png);
+  }
+
+  .faq::after {
+    margin-top: 100%;
+    margin-left: 100%;
+  }
+
+  .faq-two::after {
+    margin-top: -60%;
+  }
 }
 
 @media (max-width:1000px) {
