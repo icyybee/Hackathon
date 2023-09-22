@@ -286,6 +286,10 @@ input:focus {
     justify-content: center;
     margin-bottom: 22.15px;
   }
+
+  .criteria::before {
+    content: '';
+  }
 }
 
 @media (max-width:1000px) {

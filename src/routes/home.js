@@ -35,8 +35,8 @@ export default function Home() {
             <Hero /> 
             <Overview /> 
             <Guidelines />
-            {/* <Criteria /> 
-            <Faq />
+            <Criteria /> 
+            {/* <Faq />
             <Timeline />
             <Prizes />  
             <Sponsors />

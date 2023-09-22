@@ -8,43 +8,50 @@ import Buttons from './button'
 export default function Criteria() {
     return (
         <div className='section border-bt'>
-            <div className='flex w-full pl-[110px] pr-[102px] pb-[120px] pt-[75px]'>
-                <div className='w-[50%] h-full flex flex-col'>
-                    <div className='mb-14 w-full'>
-                        <img src={Star} alt='star' className='w-[26px] h-8 ml-[18%]'/>
+            <div className='flex w-full pl-[4.2%] desktop:pr-[7.7%] pr-[4.2%] desktop:pb-[120px] pb-[58.65px] desktop:pt-[75px] pt-[15px] flex-col desktop:flex-row'>
+                <div className='desktop:w-[50%] w-full h-full flex flex-col'>
+                    <div className='desktop:mb-14 mb-[42px] w-full desktop:justify-start justify-center flex'>
+                        <img src={Star} alt='star' className='desktop:w-[26px] w-[13px] desktop:h-8 h-[17px] desktop:ml-[18%]'/>
                     </div>
                     <div className='criteria w-full'>
-                        <img src={StarOpaque} alt='star' className='w-[26px] h-8 ml-[25%] mt-[20%] absolute'/>
+                        <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-3 desktop:h-8 h-[14px] desktop:ml-[25%] ml-[45%] desktop:mt-[20%] mt-[40%] absolute'/>
                         <img src={Attribute} alt='key' className='w-full h-full object-contain relative mt-[9%]' />
                     </div>
-                    <img src={StarWhite} alt='star' className='w-[26px] h-8 self-end'/>
+                    <img src={StarWhite} alt='star' className='w-[26px] h-8 self-end hidden desktop:flex'/>
                 </div>
-                <div className='flex-1 ml-[53px]'>
-                    <h1 className='text-[32px] font-bold font-clash-display w-[267px]'>Judging Criteria <span className='text-secondary'>Key attributes</span></h1>
-                    <div className='mt-[21px] mb-[55px] flex flex-col gap-[22px]'>
-                        <p className='text-[14px]'><span className='font-bold text-[16px] text-tertiary'>Innovation and Creativity:</span> Evaluate the uniqueness and creativity of the
+                <div className='flex-1 desktop:ml-[53px]'>
+                    <h1 className='desktop:text-[32px] text-[20px] text-center desktop:text-start font-bold font-clash-display w-full desktop:w-[267px]'>Judging Criteria <br /><span className='text-secondary'>Key attributes</span></h1>
+                    <div className='desktop:mt-[21px] mt-4 desktop:mb-[55px] mb-10 flex flex-col desktop:gap-[22px] gap-5'>
+                        <p className='desktop:text-[14px] text-center desktop:text-start text-[12px]'><span className='font-bold desktop:text-[16px] text-[13px] text-tertiary'>Innovation and Creativity:</span> Evaluate the uniqueness and creativity of the
                             solution. Consider whether it addresses a real-world problem in a novel 
                             way or introduces innovative features.
                         </p>
-                        <p className='text-[14px]'><span className='font-bold text-[16px] text-tertiary'>Functionality:</span> Assess how well the solution works. Does it perform its 
+                        <p className='desktop:text-[14px] text-center desktop:text-start text-[12px]'><span className='font-bold desktop:text-[16px] text-[13px] text-tertiary'>Functionality:</span> Assess how well the solution works. Does it perform its 
                             intended functions effectively and without major issues? Judges would
                             consider the completeness and robustness of the solution.
                         </p>
-                        <p className='text-[14px] mt-[5px]'><span className='font-bold text-[16px] text-tertiary'>Impact and Relevance:</span> Determine the potential impact of the solution 
+                        <p className='desktop:text-[14px] text-center desktop:text-start text-[12px] mt-[5px]'><span className='font-bold desktop:text-[16px] text-[13px] text-tertiary'>Impact and Relevance:</span> Determine the potential impact of the solution 
                             in the real world. Does it address a significant problem, and is it relevant 
                             to the target audience? Judges would assess the potential social, 
                             economic, or environmental benefits.
                         </p>
-                        <p className='text-[14px] mt-[1px]'><span className='font-bold text-[16px] text-tertiary'>Technical Complexity:</span> Evaluate the technical sophistication of the solution. 
+                        <p className='desktop:text-[14px] text-center desktop:text-start text-[12px] mt-[1px]'><span className='font-bold desktop:text-[16px] text-[13px] text-tertiary'>Technical Complexity:</span> Evaluate the technical sophistication of the solution. 
                             Judges would consider the complexity of the code, the use of advanced 
                             technologies or algorithms, and the scalability of the solution.
                         </p>
-                        <p className='text-[14px] mt-[6px]'><span className='font-bold text-[16px] text-tertiary'>Adherence to Hackathon Rules:</span> Judges will Ensure that the team adhered 
+                        <p className='desktop:text-[14px] text-center desktop:text-start text-[12px] mt-[6px]'><span className='font-bold desktop:text-[16px] text-[13px] text-tertiary'>Adherence to Hackathon Rules:</span> Judges will Ensure that the team adhered 
                             to the rules and guidelines of the hackathon, including deadlines, use of 
                             specific technologies or APIs, and any other competition-specific requirements.
                         </p>
                     </div>
-                    <Buttons padding={'13px 40px'} text={'Read More'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
+                    <div className='w-full flex items-center'>
+                        <div className='w-[90%] flex justify-center desktop:justify-start'>
+                            <Buttons padding={'13px 40px'} text={'Read More'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
+                        </div>
+                        <div className='desktop:hidden flex-1'>
+                            <img src={StarWhite} alt='star' className='w-[10px] h-3 self-center '/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -23,7 +23,7 @@ export default function Guidelines() {
                             of technology, and creating solutions that can change the world,
                             that's what we're all about!
                         </p>
-                        <div className='flex desktop:self-end w-full ml-[31%] desktop:ml-0'>
+                        <div className='flex desktop:self-end w-full justify-center -ml-[17%] desktop:ml-0'>
                             <img src={Star2} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3 object-contain'/>
                         </div>
                     </div>
