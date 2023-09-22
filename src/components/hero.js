@@ -39,7 +39,7 @@ export default function Hero() {
                     <div className='desktop:mt-10 mt-6 flex justify-center desktop:justify-start'>
                         <Buttons functions={() => navigate('/registration')} text={'Register'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
                     </div>
-                    <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[6px] desktop:h-8 h-2 desktop:mt-[50%] desktop:ml-[35%] ml-[17%] absolute'/>
+                    <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[6px] desktop:h-8 h-2 desktop:mt-[50%] desktop:ml-[35%] ml-[30%] absolute'/>
                     <Countdown />
                 </div>
                 <div className='w-full flex h-full desktop:justify-end justify-center right-0 relative desktop:static'>

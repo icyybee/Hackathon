@@ -279,6 +279,13 @@ input:focus {
     margin-top: -20px;
     margin-left: -20px;
   }
+
+  .idea::after {
+    content: url(./assets/img/arrow-sm.png);
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 22.15px;
+  }
 }
 
 @media (max-width:1000px) {

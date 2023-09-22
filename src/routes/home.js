@@ -33,8 +33,8 @@ export default function Home() {
             className='landing'
         >
             <Hero /> 
-            {/* <Overview /> 
-            <Guidelines />
+            <Overview /> 
+            {/* <Guidelines />
             <Criteria /> 
             <Faq />
             <Timeline />
