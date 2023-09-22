@@ -34,8 +34,8 @@ export default function Home() {
         >
             <Hero /> 
             <Overview /> 
-            {/* <Guidelines />
-            <Criteria /> 
+            <Guidelines />
+            {/* <Criteria /> 
             <Faq />
             <Timeline />
             <Prizes />  

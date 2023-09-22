@@ -42,8 +42,10 @@ export default function Hamburger({ menu, setMenu }) {
                                 if (location.pathname ==='/'){
                                     const element = document.querySelector('#timeline')
                                     element.scrollIntoView({ behavior: 'smooth' });
+                                    setMenu(false)
                                 } else{
                                     navigate('/#timeline')
+                                    setMenu(false)
                                 }
                             }}
                         >Timeline</p>                     
@@ -53,8 +55,10 @@ export default function Hamburger({ menu, setMenu }) {
                                 if (location.pathname ==='/'){
                                     const element = document.querySelector('#overview')
                                     element.scrollIntoView({ behavior: 'smooth' });
+                                    setMenu(false)
                                 } else{
                                     navigate('/#overview')
+                                    setMenu(false)
                                 }
                             }} 
                         >Overview</p> 
@@ -64,8 +68,10 @@ export default function Hamburger({ menu, setMenu }) {
                                 if (location.pathname ==='/'){
                                     const element = document.querySelector('#faq')
                                     element.scrollIntoView({ behavior: 'smooth' });
+                                    setMenu(false)
                                 } else{
                                     navigate('/#faq')
+                                    setMenu(false)
                                 }
                             }}    
                         >FAQs</p> 

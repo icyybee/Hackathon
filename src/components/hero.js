@@ -15,7 +15,7 @@ export default function Hero() {
     const navigate = useNavigate();
 
     return (
-        <div className='section-hero min-h-screen border-bt'>
+        <div className='section-hero min-h-auto border-bt'>
             <Navigation />
             <h1 className='text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold desktop:mr-[55px] mr-[33px]'>Igniting a Revolution in HR Innovation</h1>
             <div className='flex desktop:flex-row flex-col-reverse'>
