@@ -80,7 +80,6 @@ body {
 }
 
 .nav {
-  padding: 63px 127px 25px 127px;
   display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   align-items: center;
@@ -255,9 +254,38 @@ input:focus {
   padding: 0 !important;
 }
 
-.MuiBackdrop-root {
-  background: rgba(21, 14, 40, 0.93) !important;
+.MuiDrawer-paper {
+  background-color: #150E28 !important;
+  border-radius: 8px;
+  border: 0.5px solid rgba(255, 255, 255, 0.04);
+  color: #FFF !important;
+  box-shadow: none !important;
+  width: 89.2%;
 }
+
+/* RESPOSIVE BREAKPOINT */
+@media (max-width:1200px) {
+  .nav {
+    padding: 28px 50px;
+    justify-content: space-between;
+  }
+
+  .section-hero {
+    background-image: url(./assets/img/Purple-Lens-Flare-PNG.png);
+  }
+
+  .heading span::after {
+    content: url(./assets/svg/Creative\ 1.svg);
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+}
+
+@media (max-width:1000px) {
+ 
+}
+
+
 
 /* .App {
   text-align: center;

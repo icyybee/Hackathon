@@ -3,6 +3,19 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Slide from '@mui/material/Slide';
 import Success from './success';
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+    components: {
+      MuiBackdrop: {
+        styleOverrides: {
+          root: {
+            backgroundColor: 'rgba(21, 14, 40, 0.93)'
+          },
+        },
+      },
+    },
+});
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -14,7 +27,7 @@ export default function Confirmation({ success, setSuccess }) {
     };
 
     return (
-        <div>
+        <ThemeProvider theme={theme}>
             <Dialog
                 open={success}
                 TransitionComponent={Transition}
@@ -26,6 +39,6 @@ export default function Confirmation({ success, setSuccess }) {
                     <Success setSuccess={setSuccess}/>
                 </DialogContent>
             </Dialog>
-        </div>
+        </ThemeProvider>
     );
 }

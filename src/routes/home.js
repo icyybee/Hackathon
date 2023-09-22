@@ -33,7 +33,7 @@ export default function Home() {
             className='landing'
         >
             <Hero /> 
-            <Overview /> 
+            {/* <Overview /> 
             <Guidelines />
             <Criteria /> 
             <Faq />
@@ -41,7 +41,7 @@ export default function Home() {
             <Prizes />  
             <Sponsors />
             <Privacy />
-            <Footer /> 
+            <Footer />  */}
         </motion.div>
     )
 }

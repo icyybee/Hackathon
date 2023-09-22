@@ -9,40 +9,42 @@ import Flames from '../assets/img/1f4a5.png'
 import { ReactComponent as Vector } from '../assets/svg/Vector 4.svg'
 import Buttons from './button'
 import { useNavigate } from 'react-router-dom'
+import Countdown from './countdown'
 
 export default function Hero() {
     const navigate = useNavigate();
 
     return (
-        <div className='section-hero min-h-[110vh] border-bt'>
+        <div className='section-hero min-h-screen border-bt'>
             <Navigation />
-            <h1 className='text-right mt-8 text-[36px] italic font-bold mr-[55px]'>Igniting a Revolution in HR Innovation</h1>
-            <div className='flex'>
-                <img src={Star} alt='star' className='w-[26px] h-8 ml-[182px]'/>
+            <h1 className='text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold desktop:mr-[55px] mr-[33px]'>Igniting a Revolution in HR Innovation</h1>
+            <div className='flex desktop:flex-row flex-col-reverse'>
+                <img src={Star} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3 ml-[182px] desktop:mt-0 mt-[18px]'/>
                 <div className='w-full flex justify-end'>
-                    <Vector className='mr-[55px]'/>
+                    <Vector className='desktop:mr-[55px] mr-[33px] desktop:w-fit w-[115px] desktop:h-fit h-[7px]'/>
                 </div>
             </div>
-            <img src={StarOpaque} alt='star' className='w-[26px] h-8 right-[45%] absolute'/>
-            <div className='flex mt-[27px] w-full'>
-                <div className='ml-[128px] mt-10 absolute'>
-                    <h1 className='text-[80px] font-bold font-clash-display heading'>getlinked Te<span>c</span>h</h1>
-                    <div className='flex items-center'>
-                        <h1 className='text-[80px] font-bold font-clash-display'>Hackathon <span className='text-secondary'>1.0</span></h1>
-                        <img src={Chain} alt='chain' className='mix-blend-lighten'/>
-                        <img src={Flames} alt='flames' className='w-[58px] h-[58px]'/>
+            <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[6px] desktop:h-8 h-2 right-[45%] absolute'/>
+            <div className='flex desktop:flex-row flex-col desktop:mt-[27px] mt-[30px] w-full desktop:items-start items-center'>
+                <div className='desktop:ml-[8.4%] desktop:mt-10 mt-[14px] desktop:absolute'>
+                    <h1 className='text-center desktop:text-start text-[32px] desktop:text-[80px] font-bold font-clash-display heading'>getlinked Te<span>c</span>h</h1>
+                    <div className='flex items-center justify-center desktop:justify-start -mb-[5px]'>
+                        <h1 className='text-[32px] desktop:text-[80px] font-bold font-clash-display'>Hackathon <span className='text-secondary'>1.0</span></h1>
+                        <img src={Chain} alt='chain' className='mix-blend-lighten desktop:w-fit desktop:h-fit w-8 h-8'/>
+                        <img src={Flames} alt='flames' className='desktop:w-[58px] w-[22.12px] desktop:h-[58px] h-[22.12px]'/>
                     </div>
-                    <h2 className='w-[70%] mt-2 text-[20px]'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</h2>
-                    <div className='mt-10'>
+                    <div className='desktop:w-[70%] w-full mt-2 '>
+                        <h2 className='w-[264px] desktop:w-full text-center desktop:text-start desktop:text-[20px] text-[13px]'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</h2>
+                    </div>
+                    <div className='desktop:mt-10 mt-6 flex justify-center desktop:justify-start'>
                         <Buttons functions={() => navigate('/registration')} text={'Register'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
                     </div>
-                    <div className='mt-[77px] mb-[95px] text-[64px] font-unica-one'>
-                        00<span className='text-[14px] font-montserrat'>H</span>   00<span className='text-[14px] font-montserrat'>M</span>   00<span className='text-[14px] font-montserrat'>S</span>
-                    </div>
+                    <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[6px] desktop:h-8 h-2 desktop:mt-[50%] desktop:ml-[35%] ml-[17%] absolute'/>
+                    <Countdown />
                 </div>
-                <div className='w-full flex h-full justify-end right-0'>
-                    <img src={HackathonGuy} alt='hackathon guy' className='relative w-[55%] h-full object-cover mix-blend-luminosity' /> 
-                    <img src={Light} alt='hackathon guy' className='absolute right-0 w-[667px] h-full mix-blend-hard-light object-contain' /> 
+                <div className='w-full flex h-full desktop:justify-end justify-center right-0 relative desktop:static'>
+                    <img src={HackathonGuy} alt='hackathon guy' className='relative desktop:w-[55%] w-full h-full object-cover mix-blend-luminosity' /> 
+                    <img src={Light} alt='light' className='absolute desktop:right-0 desktop:w-[50%] w-full desktop:h-[641px] h-full mix-blend-hard-light object-contain -mt-[3%]' /> 
                 </div>
             </div>
         </div>

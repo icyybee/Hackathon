@@ -16,6 +16,15 @@ module.exports = {
           400: 'rgba(217, 217, 217, 0.03)',
         }
       },
+      screens: {
+        'phones': '500px',
+        'tab': '600px',
+        'phone': '700px',
+        'mini': '800px',
+        'mid': '900px',
+        'mids': '1000px',
+        'desktop': '1200px',
+      },
     },
   },
   plugins: [],
