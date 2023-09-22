@@ -89,8 +89,8 @@ export default function Timeline() {
                                     <h2 className='desktop:text-right text-secondary desktop:text-[24px] text-[12px] font-bold'>Teams Registration ends</h2>
                                     <p className='desktop:text-right desktop:text-[14px] text-[12px]'>Interested Participants are no longer Allowed to register</p>
                                 </div>
-                                <div className='desktop:flex hidden flex-col gap-[11px] items-center -mt-[90px] flex-1'>
-                                    <div className='h-[137px] w-1 bg-secondary'></div>
+                                <div className='desktop:flex hidden flex-col gap-[11px] items-center flex-1'>
+                                    <div className='h-[86px] w-1 bg-secondary'></div>
                                     <div className='h-[53px] w-[53px] circle bg-secondary flex justify-center items-center'>
                                         <p className='text-[24px] font-bold'>3</p>
                                     </div>
@@ -140,8 +140,8 @@ export default function Timeline() {
                                     <h2 className='desktop:text-right text-secondary desktop:text-[24px] text-[12px] font-bold'>Getlinked Hackathon 1.0 Offically Begins</h2>
                                     <p className='desktop:text-right desktop:text-[14px] text-[12px]'>Accepted teams can now proceed to build their ground breaking skill driven solutions</p>
                                 </div>
-                                <div className='desktop:flex hidden flex-col gap-[11px] items-center -mt-[90px] flex-1'>
-                                    <div className='h-[137px] w-1 bg-secondary'></div>
+                                <div className='desktop:flex hidden flex-col gap-[11px] items-center flex-1'>
+                                    <div className='h-[86px] w-1 bg-secondary'></div>
                                     <div className='h-[53px] w-[53px] circle bg-secondary flex justify-center items-center'>
                                         <p className='text-[24px] font-bold'>5</p>
                                     </div>

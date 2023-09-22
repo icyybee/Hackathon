@@ -38,8 +38,8 @@ export default function Home() {
             <Criteria /> 
             <Faq />
             <Timeline />
-            {/* <Prizes />  
-            <Sponsors />
+            <Prizes />  
+            {/* <Sponsors />
             <Privacy />
             <Footer />  */}
         </motion.div>
