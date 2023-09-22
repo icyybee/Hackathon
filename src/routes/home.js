@@ -40,8 +40,8 @@ export default function Home() {
             <Timeline />
             <Prizes />  
             <Sponsors />
-            {/* <Privacy />
-            <Footer />  */}
+            <Privacy />
+            {/* <Footer />  */}
         </motion.div>
     )
 }

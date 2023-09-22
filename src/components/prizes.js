@@ -46,7 +46,7 @@ export default function Prizes() {
                                 <div className='mt-[15px] flex items-center flex-col text-center h-full justify-end'>
                                     <p className='desktop:text-[36px] text-[12px] font-bold'>2nd</p>
                                     <p className='desktop:text-[24px] text-[12px] font-semibold -mt-2'>Runner</p>
-                                    <p className='px-4 desktop:text-[32px] text-[14px] font-bold text-secondary -mt-2'>N300,000</p>
+                                    <p className='px-4 desktop:text-[32px] text-[14px] font-bold text-secondary desktop:-mt-2 mt-0'>N300,000</p>
                                 </div>
                             </div>
                             <div className='border border-secondary relative rounded-lg bg-gradient-100 desktop:h-[345px] h-[147.3px] -mt-[23px] desktop:pb-[33px] pb-[22.5px] desktop:w-[212px] w-[90px] flex flex-col items-center'>
@@ -56,7 +56,7 @@ export default function Prizes() {
                                 <div className='mt-[15px] flex items-center flex-col text-center h-full justify-end'>
                                     <p className='desktop:text-[36px] text-[12px] font-bold'>1st</p>
                                     <p className='desktop:text-[24px] text-[12px] font-semibold -mt-2'>Runner</p>
-                                    <p className='px-4 desktop:text-[32px] text-[14px] font-bold text-secondary -mt-2'>N400,000</p>
+                                    <p className='px-4 desktop:text-[32px] text-[14px] font-bold text-secondary desktop:-mt-2 mt-0'>N400,000</p>
                                 </div>
                             </div>
                             <div className='border border-secondary rounded-lg bg-gradient-100 desktop:h-[296px] h-[125.6px] desktop:pb-[33px] pb-[22.5px] desktop:w-[212px] w-[90px] flex flex-col items-center'>
@@ -66,7 +66,7 @@ export default function Prizes() {
                                 <div className='mt-[15px] flex items-center flex-col text-center h-full justify-end'>
                                     <p className='desktop:text-[36px] text-[12px] font-bold'>3rd</p>
                                     <p className='desktop:text-[24px] text-[12px] font-semibold -mt-2'>Runner</p>
-                                    <p className='px-4 desktop:text-[32px] text-[14px] font-bold text-secondary -mt-2'>N150,000</p>
+                                    <p className='px-4 desktop:text-[32px] text-[14px] font-bold text-secondary desktop:-mt-2 mt-0'>N150,000</p>
                                 </div>
                             </div>
                         </div>

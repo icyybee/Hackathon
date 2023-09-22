@@ -324,6 +324,10 @@ input:focus {
   .part, .parts {
     width: 100%;
   }
+
+  .hi::before {
+    display: none;
+  }
 }
 
 @media (max-width:1000px) {
