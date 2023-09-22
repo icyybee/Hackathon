@@ -37,8 +37,8 @@ export default function Home() {
             <Guidelines />
             <Criteria /> 
             <Faq />
-            {/* <Timeline />
-            <Prizes />  
+            <Timeline />
+            {/* <Prizes />  
             <Sponsors />
             <Privacy />
             <Footer />  */}
