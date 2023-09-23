@@ -329,7 +329,8 @@ input:focus {
     display: none;
   }
 
-  .contact .nav {
+  .contact .nav,
+  .registration .nav {
     display: none;
   }
 
@@ -339,9 +340,21 @@ input:focus {
     padding: 0% 5%;
   }
 
-  input, 
-  select {
+  .registration .contact-box {
+    padding: 0%;
+  }
+
+  input {
     padding: 13px 24px;
+  }
+
+  select {
+    padding: 12px 10px;
+    /* color: #FFF; */
+  }
+
+  .walk {
+    width: 89.12px;
   }
 }
 

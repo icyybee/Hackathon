@@ -94,8 +94,8 @@ export default function RegistrationForm({ setSuccess, success }) {
     }        
     
     return (
-        <form className='mt-[33px] flex flex-col w-full'>
-            <div className='flex gap-8 w-full'>
+        <form className='desktop:mt-[33px] mt-[23px] flex flex-col w-full'>
+            <div className='flex desktop:flex-row flex-col desktop:gap-8 gap-[18px] w-full'>
                 <FormInput 
                     placeholder={'Enter the name of your group'} 
                     label={'Team’s Name'} 
@@ -123,7 +123,7 @@ export default function RegistrationForm({ setSuccess, success }) {
                     errorMessage= {validateFields && !registrationData.phone_number}
                 />
             </div>
-            <div className='flex gap-8 mt-[29px] w-full'>
+            <div className='flex desktop:flex-row flex-col desktop:gap-8 gap-[18px] mt-[29px] w-full'>
                 <FormInput 
                     placeholder={'Enter your email address'} 
                     label={'Email'} 
@@ -150,8 +150,9 @@ export default function RegistrationForm({ setSuccess, success }) {
                     errorMessage= {validateFields && !registrationData.project_topic}
                 />
             </div>
-            <div className='flex gap-8 mt-[29px] w-full'>
+            <div className='flex desktop:gap-8 gap-[19px] mt-[29px] w-full'>
                 <SelectInput 
+                    width={'[70%]'}
                     label={'Category'} 
                     placeholder={'Select your category'} 
                     name={'category'} 
@@ -178,8 +179,8 @@ export default function RegistrationForm({ setSuccess, success }) {
                     errorMessage= {validateFields && !registrationData.category}
                 />
             </div>
-            <p className='mt-[23px] text-[12px] italic text-tertiary mb-4'>Please review your registration details before submitting</p>
-            <div className='flex gap-[10px] items-center mb-[22px]'>
+            <p className='desktop:mt-[23px] mt-[15px] desktop:text-[12px] text-[9px] italic text-tertiary desktop:mb-4 mb-3'>Please review your registration details before submitting</p>
+            <div className='flex gap-[10px] items-center desktop:mb-[22px] mb-[14px]'>
                 <input 
                     type='checkbox' 
                     className='w-[14px] h-[14px]' 
@@ -191,9 +192,14 @@ export default function RegistrationForm({ setSuccess, success }) {
                         })
                     }}
                 />
-                <p className='text-[12px]'>I agreed with the event terms and conditions  and privacy policy</p>
+                <p className='desktop:text-[12px] text-[10px]'>I agreed with the event terms and conditions  and privacy policy</p>
             </div>
-            <Buttons icon={loading && <CircularProgress size={'27px'} style={{ color: "white" }} />} functions={handleSubmit} text={loading ? '' : 'Register Now'} width={'100%'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
+            <div className='desktop:hidden'>
+                <Buttons icon={loading && <CircularProgress size={'27px'} style={{ color: "white" }} />} functions={handleSubmit} text={loading ? '' : 'Submit'} width={'100%'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
+            </div>
+            <div className='hidden desktop:flex'>
+                <Buttons icon={loading && <CircularProgress size={'27px'} style={{ color: "white" }} />} functions={handleSubmit} text={loading ? '' : 'Register Now'} width={'100%'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
+            </div>
         </form>
     )
 }
