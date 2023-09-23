@@ -16,7 +16,7 @@ export default function Hero() {
     const navigate = useNavigate();
 
     return (
-        <div className='section-hero desktop:min-h-[110vh] min-h-auto border-bt'>
+        <div className='section-hero overflow-hidden desktop:min-h-[110vh] min-h-auto border-bt'>
             <Navigation />
             <Typed
                 strings={[
