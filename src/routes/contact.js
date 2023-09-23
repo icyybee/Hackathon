@@ -30,14 +30,14 @@ export default function Contact() {
             <div className='desktop:hidden w-full pt-[47px] px-[13%]' onClick={() => navigate('/')}>
                 <Group />
                 <div className='desktop:hidden flex justify-center w-full'>
-                    <img src={Star} alt='star' className='w-[11px] h-[13px]'/>
+                    <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[11px] h-[13px]'/>
                 </div>
             </div>
             <div className='desktop:mt-[51px] mt-[31px] desktop:pb-[11.7%] pb-[36.44px] px-[8%] flex w-full'>
-                <img src={StarOutline} alt='star' className='desktop:block hidden mr-11 w-[23px] h-7 mt-[16%]'/>
+                <img src={StarOutline} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:block hidden mr-11 w-[23px] h-7 mt-[16%]'/>
                 <div className='flex flex-col flex-1'>
-                    <img src={StarOpaque} alt='star' className='absolute desktop:static desktop:w-[26px] w-4 desktop:h-8 h-5 flex self-end mr-[5%]'/>
-                    <img src={Star} alt='star' className='desktop:block hidden mt-1 w-[21px] h-[25px]'/>
+                    <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower absolute desktop:static desktop:w-[26px] w-4 desktop:h-8 h-5 flex self-end mr-[5%]'/>
+                    <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:block hidden mt-1 w-[21px] h-[25px]'/>
                     <div className='desktop:mt-8 flex w-full justify-between'>
                         <div className='mt-[5%] desktop:block hidden'>
                             <div className='w-[272px]'>
@@ -57,7 +57,7 @@ export default function Contact() {
                         </div>
                         <div className='flex desktop:w-[60%] w-full'>
                             <div className='absolute -ml-[15px] flex items-center h-full'>
-                                <img src={StarPu} alt='star' className='desktop:w-[30px] w-[12px] desktop:h-9 h-[15px]'/>
+                                <img src={StarPu} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[30px] w-[12px] desktop:h-9 h-[15px]'/>
                             </div>
                             <div className='rounded-[12px] contact-box desktop:w-[90%] w-full'>
                                 <h1 className='text-[20px] font-semibold text-secondary'>Questions or need assistance?</h1>
@@ -66,7 +66,7 @@ export default function Contact() {
                                 <ContactForm />
                             </div>
                             <div className='h-full flex items-end desktop:ml-[54px] '>
-                                <img src={StarWhite} alt='star' className='desktop:w-[26px] w-[12px] desktop:h-8 h-[15px]'/>
+                                <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[12px] desktop:h-8 h-[15px]'/>
                             </div>
                         </div>
                     </div>

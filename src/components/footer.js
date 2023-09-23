@@ -33,7 +33,7 @@ export default function Footer() {
                     <div>
                         <h2 className='text-[14px] font-semibold text-secondary mb-[6px]'>Useful Links</h2>
                         <div className='flex flex-col gap-[11px]'>
-                            <p className='text-[12px]' 
+                            <p className='text-[12px] cursor-pointer' 
                                 onClick={() => {
                                     if (location.pathname ==='/'){
                                         const element = document.querySelector('#overview')
@@ -43,7 +43,7 @@ export default function Footer() {
                                     }
                                 }}
                             >Overview</p>
-                            <p className='text-[12px]' 
+                            <p className='text-[12px] cursor-pointer' 
                                 onClick={() => {
                                     if (location.pathname ==='/'){
                                         const element = document.querySelector('#timeline')
@@ -53,7 +53,7 @@ export default function Footer() {
                                     }
                                 }}
                             >Timeline</p>
-                            <p className='text-[12px]' 
+                            <p className='text-[12px] cursor-pointer' 
                                 onClick={() => {
                                     if (location.pathname ==='/'){
                                         const element = document.querySelector('#faq')
@@ -63,7 +63,7 @@ export default function Footer() {
                                     }
                                 }}
                             >FAQs</p>
-                            <p className='text-[12px]' onClick={() => navigate('/registration')}>Register</p>
+                            <p className='text-[12px] cursor-pointer' onClick={() => navigate('/registration')}>Register</p>
                         </div>
                     </div>
                     <div className='flex gap-4 flex-1 items-center desktop:hidden mt-[18px]'>
@@ -108,7 +108,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='mt-[67px] w-full flex flex-col items-center'>
-                <img src={Star} alt='star' className='w-[7px] h-2 desktop:w-auto desktop:h-auto' />
+                <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[7px] h-2 desktop:w-auto desktop:h-auto' />
                 <p className='mt-6 text-[12px]'>All rights reserved. © getlinked Ltd.</p>
             </div>
         </div>

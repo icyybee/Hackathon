@@ -11,13 +11,13 @@ export default function Criteria() {
             <div className='flex w-full pl-[4.2%] desktop:pr-[7.7%] pr-[4.2%] desktop:pb-[120px] pb-[58.65px] desktop:pt-[75px] pt-[15px] flex-col desktop:flex-row'>
                 <div className='desktop:w-[50%] w-full h-full flex flex-col'>
                     <div className='desktop:mb-14 mb-[42px] w-full desktop:justify-start justify-center flex'>
-                        <img src={Star} alt='star' className='desktop:w-[26px] w-[13px] desktop:h-8 h-[17px] desktop:ml-[18%]'/>
+                        <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[13px] desktop:h-8 h-[17px] desktop:ml-[18%]'/>
                     </div>
                     <div className='criteria w-full'>
-                        <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-3 desktop:h-8 h-[14px] desktop:ml-[25%] ml-[45%] desktop:mt-[20%] mt-[40%] absolute'/>
+                        <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-3 desktop:h-8 h-[14px] desktop:ml-[25%] ml-[45%] desktop:mt-[20%] mt-[40%] absolute'/>
                         <img src={Attribute} alt='key' className='w-full h-full object-contain relative mt-[9%]' />
                     </div>
-                    <img src={StarWhite} alt='star' className='w-[26px] h-8 self-end hidden desktop:flex'/>
+                    <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[26px] h-8 self-end hidden desktop:flex'/>
                 </div>
                 <div className='flex-1 desktop:ml-[53px]'>
                     <h1 className='desktop:text-[32px] text-[20px] text-center desktop:text-start font-bold font-clash-display w-full desktop:w-[267px]'>Judging Criteria <br /><span className='text-secondary'>Key attributes</span></h1>
@@ -49,7 +49,7 @@ export default function Criteria() {
                             <Buttons padding={'13px 40px'} text={'Read More'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
                         </div>
                         <div className='desktop:hidden'>
-                            <img src={StarWhite} alt='star' className='w-[10px] h-3 self-center '/>
+                            <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[10px] h-3 self-center '/>
                         </div>
                     </div>
                 </div>

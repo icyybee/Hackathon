@@ -12,14 +12,14 @@ export default function Prizes() {
         <div className='section desktop:pt-[74px] pt-[46px] desktop:pb-[149px] pb-[31px] px-[8%]'>
             <div className='flex flex-col desktop:flex-row w-full gap-[37px]'>
                 <div className='flex-1 h-full flex flex-col desktop:gap-[150px] gap-[17px]'>
-                    <img src={Star2} alt='star' className='desktop:w-[26px] w-[7px] desktop:h-8 h-[9px]'/>
+                    <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[7px] desktop:h-8 h-[9px]'/>
                     <div className='flex flex-col w-full items-center desktop:hidden text-center'>
                         <div className='flex'>
                             <div className='w-full'>
                                 <h1 className='text-[20px] font-bold font-clash-display'>Prizes and</h1> 
                                 <span className='text-secondary text-[20px] font-bold font-clash-display mb-[3px]'>Rewards</span>
                             </div>
-                            <img src={Star2} alt='star' className='desktop:w-[26px] w-[7px] desktop:h-8 h-[9px] absolute right-[25%] mt-[5%]'/>
+                            <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[7px] desktop:h-8 h-[9px] absolute right-[25%] mt-[5%]'/>
                         </div>
                         <h2 className='text-[12px] w-full mb-[23px]'>Highlight of the prizes or rewards for winners and for participants.</h2>
                     </div>
@@ -35,8 +35,8 @@ export default function Prizes() {
                             <h2 className='text-[16px] w-[401px] mb-[83px]'>Highlight of the prizes or rewards for winners and for participants.</h2>
                         </div>
                         <div className='flex desktop:mt-0 -mt-8'>
-                            <img src={Star} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
-                            <img src={StarOpaque} alt='star' className='desktop:block hidden w-[26px] h-8 ml-[45%]'/>
+                            <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
+                            <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:block hidden w-[26px] h-8 ml-[45%]'/>
                         </div>
                         <div className='flex desktop:gap-[30px] gap-[12.99px] justify-center mt-[120px]'>
                             <div className='border border-secondary rounded-lg bg-gradient-100 desktop:pb-[33px] pb-[22.5px] desktop:h-[296px] h-[125.6px] desktop:w-[212px] w-[90px] flex flex-col items-center'>
@@ -74,8 +74,8 @@ export default function Prizes() {
                 </div>
             </div>
             <div className='flex w-[77%] justify-between desktop:mt-[10px] mt-[53px]'>
-                <img src={Star} alt='star' className='desktop:w-[15px] w-[10px] desktop:h-[18px] h-3 absolute desktop:static -mt-[70%] desktop:mt-0 right-[20%]'/>
-                <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
+                <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[15px] w-[10px] desktop:h-[18px] h-3 absolute desktop:static -mt-[70%] desktop:mt-0 right-[20%]'/>
+                <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
             </div>
         </div>
     )

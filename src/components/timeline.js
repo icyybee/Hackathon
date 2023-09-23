@@ -24,7 +24,7 @@ export default function Timeline() {
                     <h2 className='text-[14px] w-[346px]'>Here is the breakdown of the time we anticipate using for the upcoming event.</h2>
                 </div>
                 <div className='desktop:mt-[91px] mt-6 w-full'>
-                    <img src={Star} alt='star' className='desktop:w-[26px] w-[14px] desktop:h-8 h-4 mb-4 desktop:mb-0'/>
+                    <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[14px] desktop:h-8 h-4 mb-4 desktop:mb-0'/>
                     <div className='flex flex-col desktop:gap-2 gap-[27px] desktop:mt-[60px]'>
                         <div className='flex gap-5 justify-between'>
                             <div className='desktop:hidden flex flex-col gap-[4.68px] items-center flex-1'>
@@ -97,7 +97,7 @@ export default function Timeline() {
                                 </div>
                                 <div className='flex desktop:ml-[98px] desktop:w-[35%] w-full h-full desktop:h-auto items-end justify-between'>
                                     <p className='text-secondary desktop:text-[24px] text-[12px] font-bold'>November 18, 2023</p>
-                                    <img src={Star2} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
+                                    <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@ export default function Timeline() {
                                 </div>
                             </div>
                         </div>
-                        <img src={Star3} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
+                        <img src={Star3} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
                     </div>
                 </div>
             </div>

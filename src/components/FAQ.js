@@ -23,7 +23,7 @@ export default function Faq() {
         <div className='section-one border-bt'>
             <div className='flex flex-col desktop:flex-row w-full items-center desktop:pl-[13.54%] px-[47px] desktop:pr-[6.51%] desktop:pt-8 pt-[47px] pb-16' id='faq'>
                 <div className='flex-1 mt-10'>
-                    <img src={Star} alt='star' className='desktop:w-[26px] w-[18px] desktop:h-8 h-[22px] desktop:-ml-6 desktop:mb-5'/>
+                    <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[18px] desktop:h-8 h-[22px] desktop:-ml-6 desktop:mb-5'/>
                     <h1 className='desktop:text-[32px] text-[20px] font-bold font-clash-display desktop:w-[253px] text-center desktop:text-start'>Frequently Ask <br /><span className='text-secondary'>Question</span></h1>
                     <h2 className='desktop:mt-4 mt-[6px] desktop:w-[342px] desktop:text-[14px] text-[12px] w-full text-center desktop:text-start'>We got answers to the questions that you might want to ask about <span className='font-bold'>getlinked Hackathon 1.0</span></h2>
                     <div className='flex flex-col desktop:flex-row desktop:gap-12'>
@@ -35,7 +35,7 @@ export default function Faq() {
                             <Frequent title={'What happens after the hackathon ends'}/>
                             <Frequent title={'Can I work on a project I started before the hackathon?'}/>
                         </div>
-                        <img src={StarWhite} alt='star' className='desktop:block hidden w-[26px] h-8 ml-[10%] mt-[27%]'/>
+                        <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:block hidden w-[26px] h-8 ml-[10%] mt-[27%]'/>
                     </div>
                 </div>
                 <div className='desktop:w-[60%] w-full flex flex-col h-full mt-[63px] desktop:mt-0 items-center desktop:items-start'>
@@ -53,9 +53,9 @@ export default function Faq() {
                     <div className='flex flex-col desktop:gap-8 w-full'>
                         <img src={Manual} alt='manual' className='w-full h-full object-contain' />
                         <div className='desktop:hidden block absolute mt-[50%]'>
-                            <img src={StarWhite} alt='star' className='w-[10px] h-3'/>
+                            <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[10px] h-3'/>
                         </div>
-                        <img src={Star2} alt='star' className='desktop:w-[26px] w-4 desktop:h-8 h-5 self-end mr-[17%]'/>
+                        <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-4 desktop:h-8 h-5 self-end mr-[17%]'/>
                     </div>
                 </div>
             </div>

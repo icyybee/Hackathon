@@ -15,16 +15,16 @@ export default function Hero() {
     const navigate = useNavigate();
 
     return (
-        <div className='section-hero min-h-auto border-bt'>
+        <div className='section-hero desktop:min-h-[110vh] min-h-auto border-bt'>
             <Navigation />
             <h1 className='text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold desktop:mr-[55px] mr-[33px]'>Igniting a Revolution in HR Innovation</h1>
             <div className='flex desktop:flex-row flex-col-reverse'>
-                <img src={Star} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3 ml-[182px] desktop:mt-0 mt-[18px]'/>
+                <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3 ml-[182px] desktop:mt-0 mt-[18px]'/>
                 <div className='w-full flex justify-end'>
                     <Vector className='desktop:mr-[55px] mr-[33px] desktop:w-fit w-[115px] desktop:h-fit h-[7px]'/>
                 </div>
             </div>
-            <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[6px] desktop:h-8 h-2 right-[45%] absolute'/>
+            <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[6px] desktop:h-8 h-2 right-[45%] absolute'/>
             <div className='flex desktop:flex-row flex-col desktop:mt-[27px] mt-[30px] w-full desktop:items-start items-center'>
                 <div className='desktop:ml-[8.4%] desktop:mt-10 mt-[14px] desktop:absolute'>
                     <h1 className='text-center desktop:text-start text-[32px] desktop:text-[80px] font-bold font-clash-display heading'>getlinked Te<span>c</span>h</h1>
@@ -39,12 +39,12 @@ export default function Hero() {
                     <div className='desktop:mt-10 mt-6 flex justify-center desktop:justify-start'>
                         <Buttons functions={() => navigate('/registration')} text={'Register'} width={'172px'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
                     </div>
-                    <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[6px] desktop:h-8 h-2 desktop:mt-[50%] desktop:ml-[35%] ml-[30%] absolute'/>
+                    <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[6px] desktop:h-8 h-2 desktop:mt-[5%] desktop:ml-[35%] ml-[30%] absolute'/>
                     <Countdown />
                 </div>
                 <div className='w-full flex h-full desktop:justify-end justify-center right-0 relative desktop:static'>
                     <img src={HackathonGuy} alt='hackathon guy' className='relative desktop:w-[55%] w-full h-full object-cover mix-blend-luminosity' /> 
-                    <img src={Light} alt='light' className='absolute desktop:right-0 desktop:w-[50%] w-full desktop:h-[641px] h-full mix-blend-hard-light object-contain -mt-[3%]' /> 
+                    <img src={Light} alt='light' className='animate__animated animate__zoomIn animate__infinite animate__slower absolute desktop:right-0 desktop:w-[50%] w-full desktop:h-[641px] h-full mix-blend-hard-light object-contain -mt-[3%]' /> 
                 </div>
             </div>
         </div>

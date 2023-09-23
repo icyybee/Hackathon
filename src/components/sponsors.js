@@ -16,7 +16,7 @@ export default function Sponsors() {
                 <h2 className='desktop:w-[452px] w-full desktop:mt-[22px] mt-[5px] desktop:text-[14px] text-[12px] text-center'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h2>
                 <div className='w-full desktop:mt-[65px] mt-[41px] desktop:h-[560px] h-[148.58px] sponsor rounded-[5px] border border-secondary'>
                     <div className='desktop:pt-[100px] py-[38.21px] desktop:pb-[77px] flex flex-col items-center'>
-                        <img src={Star} alt='star' className='w-[7px] h-[7px] desktop:w-auto desktop:h-auto desktop:mb-[19px] absolute desktop:static'/>
+                        <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[7px] h-[7px] desktop:w-auto desktop:h-auto desktop:mb-[19px] absolute desktop:static'/>
                         <div className='flex flex-col desktop:gap-[31.16px] gap-[8.39px] w-full'>
                             <div className='flex desktop:h-[140px] px-[9%] h-10 justify-between w-full'>
                                 <div className='part'>
@@ -46,7 +46,7 @@ export default function Sponsors() {
                             </div>
                         </div>
                         <div className='w-full desktop:mt-[34px] flex justify-end desktop:justify-center mr-[25%] desktop:mr-0'>
-                            <img src={Star2} alt='star' className='desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
+                            <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3'/>
                         </div>
                     </div>
                 </div>

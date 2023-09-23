@@ -33,14 +33,14 @@ export default function Registration() {
                 <div className='flex-1 flex px-[10%] desktop:px-0'>
                     <img src={Guy} alt='3d' className='w-full h-full object-cover' />
                     <div className='absolute right-[15%] mt-[40%] desktop:hidden'>
-                        <img src={Star} alt='star' className='desktop:w-[26px] w-[14px] desktop:h-8 h-[13px]'/>
+                        <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[14px] desktop:h-8 h-[13px]'/>
                     </div>
                 </div>
 
                 <div className='desktop:w-[55%] w-full'>
                     <div className='desktop:rounded-[12px] flex desktop:flex-col contact-box w-full gap-[17px] desktop:gap-0'>
                         <div className='flex justify-end desktop:w-full desktop:-ml-[15%] mt-[30%] desktop:mt-0'>
-                            <img src={StarOpaque} alt='star' className='desktop:w-[26px] w-[14px] desktop:h-8 h-[18px] object-contain'/>
+                            <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[14px] desktop:h-8 h-[18px] object-contain'/>
                         </div>
                         <div className='w-full desktop:w-auto'>
                             <h1 className='mt-[15px] text-[32px] font-semibold text-secondary hidden desktop:block'>Register</h1>
@@ -55,7 +55,7 @@ export default function Registration() {
                             <RegistrationForm setSuccess={setSuccess} success={success}/>
                         </div>
                         <div className='flex items-end mb-[17%] desktop:hidden'>
-                            <img src={Star} alt='star' className='desktop:w-[26px] w-[14px] desktop:h-8 h-[13px]'/>
+                            <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[14px] desktop:h-8 h-[13px]'/>
                         </div>
                     </div>
                 </div>
