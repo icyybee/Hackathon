@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { handleNavigation } from '../library/helperFunction'
 import { ReactComponent as Phone } from '../assets/svg/Group.svg'
 import { ReactComponent as Map } from '../assets/svg/Vector (7).svg'
@@ -11,6 +11,7 @@ import Star from '../assets/img/sata gra2.png';
 
 export default function Footer() {
     const navigate = useNavigate()
+    const location = useLocation()
 
     return (
         <div className='section-plain desktop:pt-[70px] pt-[51px] py-[54px] px-[14.19%]'>
@@ -32,10 +33,37 @@ export default function Footer() {
                     <div>
                         <h2 className='text-[14px] font-semibold text-secondary mb-[6px]'>Useful Links</h2>
                         <div className='flex flex-col gap-[11px]'>
-                            <p className='text-[12px]'>Overview</p>
-                            <p className='text-[12px]'>Timeline</p>
-                            <p className='text-[12px]'>FAQs</p>
-                            <p className='text-[12px]'>Register</p>
+                            <p className='text-[12px]' 
+                                onClick={() => {
+                                    if (location.pathname ==='/'){
+                                        const element = document.querySelector('#overview')
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                    } else{
+                                        navigate('/#overview')
+                                    }
+                                }}
+                            >Overview</p>
+                            <p className='text-[12px]' 
+                                onClick={() => {
+                                    if (location.pathname ==='/'){
+                                        const element = document.querySelector('#timeline')
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                    } else{
+                                        navigate('/#timeline')
+                                    }
+                                }}
+                            >Timeline</p>
+                            <p className='text-[12px]' 
+                                onClick={() => {
+                                    if (location.pathname ==='/'){
+                                        const element = document.querySelector('#faq')
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                    } else{
+                                        navigate('/#faq')
+                                    }
+                                }}
+                            >FAQs</p>
+                            <p className='text-[12px]' onClick={() => navigate('/registration')}>Register</p>
                         </div>
                     </div>
                     <div className='flex gap-4 flex-1 items-center desktop:hidden mt-[18px]'>
