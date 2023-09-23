@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Logo from '../assets/img/logo.png'
+import { handleNavigation } from '../library/helperFunction'
 import { ReactComponent as Phone } from '../assets/svg/Group.svg'
 import { ReactComponent as Map } from '../assets/svg/Vector (7).svg'
 import { ReactComponent as Twitter } from '../assets/svg/Vector (5).svg'
@@ -41,10 +41,10 @@ export default function Footer() {
                     <div className='flex gap-4 flex-1 items-center desktop:hidden mt-[18px]'>
                         <p className='text-[12px] text-secondary'>Follow us</p>
                         <div className='flex gap-[19px] items-center cursor-pointer'>
-                            <Instagram />
-                            <Twitter />
-                            <Facebook />
-                            <Linkedin />
+                            <Instagram onClick={() => handleNavigation('https://instagram.com/getlinked.ai?igshid=MzRlODBiNWFlZA==')} />
+                            <Twitter onClick={() => handleNavigation('https://x.com/getlinkedai?s=11&t=O7i9Vbkwj72Q_kAExuGNoA')}/>
+                            <Facebook onClick={() => handleNavigation('https://www.facebook.com/getLinkedai?mibextid=LQQJ4d')}/>
+                            <Linkedin onClick={() => handleNavigation('https://www.linkedin.com/company/getlinked-ai/')}/>
                         </div>
                     </div>
                     <div className='mt-16 desktop:mt-0'>
@@ -72,10 +72,10 @@ export default function Footer() {
                 <div className='flex gap-4 flex-1 items-center'>
                     <p className='text-[12px] text-secondary'>Follow us</p>
                     <div className='flex gap-[19px] items-center cursor-pointer'>
-                        <Instagram />
-                        <Twitter />
-                        <Facebook />
-                        <Linkedin />
+                        <Instagram onClick={() => handleNavigation('https://instagram.com/getlinked.ai?igshid=MzRlODBiNWFlZA==')} />
+                        <Twitter onClick={() => handleNavigation('https://x.com/getlinkedai?s=11&t=O7i9Vbkwj72Q_kAExuGNoA')}/>
+                        <Facebook onClick={() => handleNavigation('https://www.facebook.com/getLinkedai?mibextid=LQQJ4d')}/>
+                        <Linkedin onClick={() => handleNavigation('https://www.linkedin.com/company/getlinked-ai/')}/>
                     </div>
                 </div>
             </div>

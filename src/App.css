@@ -328,12 +328,22 @@ input:focus {
   .hi::before {
     display: none;
   }
-}
 
-@media (max-width:1000px) {
- 
-}
+  .contact .nav {
+    display: none;
+  }
 
+  .contact-box {
+    background: inherit;
+    box-shadow: none;
+    padding: 0% 5%;
+  }
+
+  input, 
+  select {
+    padding: 13px 24px;
+  }
+}
 
 
 /* .App {

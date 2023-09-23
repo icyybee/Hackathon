@@ -67,8 +67,8 @@ export default function ContactForm() {
     };
     
     return (
-        <form className='mt-[34px]'>
-            <div className='mb-[42px]'>
+        <form className='desktop:mt-[34px] mt-[30px]'>
+            <div className='desktop:mb-[42px] mb-[25px]'>
                 <input 
                     className='w-full text-[16px]'
                     placeholder='First Name'
@@ -114,7 +114,7 @@ export default function ContactForm() {
             </div>
             <div className='mb-[31px]'>
                 <textarea 
-                    className='w-full text-[16px] py-[6px] px-[15px]'
+                    className='w-full text-[16px] desktop:py-[6px] py-[27px] px-6 desktop:px-[15px]'
                     placeholder='Message'
                     name="message"
                     value={contactData.message}

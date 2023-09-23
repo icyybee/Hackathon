@@ -20,3 +20,7 @@ export function calculateTimeRemaining(targetDate) {
         secs,
     };
 }
+
+export function handleNavigation(link) {
+    window.open(link, "_blank");
+}
