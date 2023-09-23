@@ -22,7 +22,7 @@ export default function Registration() {
             animate={{opacity: 1, y: 0}}
             exit={{opacity:0, y: 0}}
             transition={{delay: 0.25, type: "spring"}}
-            className='section min-h-auto registration testing'
+            className='section min-h-auto registration'
         >
             <Navigation />
             <div className='desktop:hidden w-full pt-[47px] px-[13%]' onClick={() => navigate('/')}>
