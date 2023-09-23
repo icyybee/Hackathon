@@ -22,10 +22,10 @@ export default function Hero() {
                 strings={[
                     'Igniting a Revolution in HR Innovation'
                 ]}
-                typeSpeed={40}
+                typeSpeed={50}
                 backSpeed={50}
-                className="w-full flex justify-end typed-header text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold desktop:mr-[55px] mr-[33px]"
-                loop
+                cursorChar=''
+                className="w-full flex justify-end typed-header text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold"
             />
             <div className='flex desktop:flex-row flex-col-reverse'>
                 <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3 ml-[182px] desktop:mt-0 mt-[18px]'/>
@@ -53,7 +53,7 @@ export default function Hero() {
                 </div>
                 <div className='w-full flex h-full desktop:justify-end justify-center right-0 relative desktop:static'>
                     <img src={HackathonGuy} alt='hackathon guy' className='relative desktop:w-[55%] w-full h-full object-cover mix-blend-luminosity' /> 
-                    <img src={Light} alt='light' className='animate__animated animate__zoomIn animate__infinite animate__slower absolute desktop:right-0 desktop:w-[50%] w-full desktop:h-[641px] h-full mix-blend-hard-light object-contain -mt-[3%]' /> 
+                    <img src={Light} alt='light' className='App-logo absolute desktop:right-0 desktop:w-[50%] w-full desktop:h-[641px] h-full mix-blend-hard-light object-contain -mt-[3%]' /> 
                 </div>
             </div>
         </div>

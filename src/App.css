@@ -1,3 +1,5 @@
+@import 'animate.css/animate.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,7 @@ body {
   color: #FFF;
   background: #150E28;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .font-montserrat {
@@ -96,6 +99,10 @@ body {
   margin-left: -30px;
 }
 
+.typed-header span:first-child {
+  margin-right: 55px;
+}
+
 .idea::after {
   content: url(./assets/img/arrow.png);
   display: flex;
@@ -107,6 +114,11 @@ body {
   display: flex;
   position: absolute;
   margin-left: 70px;
+}
+
+.faq::after,
+.faq-two::after {
+  animation: flash 3s infinite;
 }
 
 .faq::after {
@@ -133,6 +145,7 @@ body {
   content: url(./assets/img/star\ pu2.png);
   position: absolute;
   margin-top: -45px;
+  animation: flash 3s infinite;
 }
 
 .part,
@@ -166,6 +179,7 @@ body {
   display: flex;
   align-self: end;
   margin-bottom: 150px;
+  animation: flash 3s infinite;
 }
 
 .registration .nav .nav__contact,
@@ -363,37 +377,18 @@ input:focus {
   .MuiDialog-paper {
     padding: 20px 30px 28px 35px;
   }
+
+  .typed-header span:first-child {
+    margin-right: 33px;
+  }
 }
 
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* KEYFRAMES */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -403,4 +398,13 @@ input:focus {
   to {
     transform: rotate(360deg);
   }
-} */
+} 
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
