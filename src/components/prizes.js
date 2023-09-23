@@ -12,13 +12,23 @@ export default function Prizes() {
     const [ref, inView] = useInView({
         triggerOnce: false,
     });
+    const [ref2, inView2] = useInView({
+        triggerOnce: false,
+    });
     const [scrollY, setScrollY] = useState(false);
+    const [scrollX, setScrollX] = useState(false);
 
     useEffect(() => {
         if (inView) {
           setScrollY(true);
         }
     }, [inView]);
+    
+    useEffect(() => {
+        if (inView2) {
+          setScrollX(true);
+        }
+    }, [inView2]);
 
     return (
         <div className='section desktop:pt-[74px] pt-[46px] desktop:pb-[149px] pb-[31px] px-[8%]'>
@@ -39,7 +49,7 @@ export default function Prizes() {
                 </div>
                 <div className='desktop:w-[55%] w-full'>
                     <div className='w-full'>
-                        <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated desktop:flex flex-col w-full items-center hidden`}>
+                        <div ref={ref2} className={`${scrollX ? 'animate__slideInUp' : ''} animate__animated desktop:flex flex-col w-full items-center hidden`}>
                             <div className='w-[401px]'>
                                 <h1 className='text-[32px] font-bold font-clash-display'>Prizes and</h1> 
                                 <span className='text-secondary text-[32px] font-bold font-clash-display mb-5'>Rewards</span>

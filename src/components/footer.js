@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { handleNavigation } from '../library/helperFunction'
 import { ReactComponent as Phone } from '../assets/svg/Group.svg'
@@ -14,10 +15,20 @@ import Star3 from '../assets/img/star-opaque.png';
 export default function Footer() {
     const navigate = useNavigate()
     const location = useLocation()
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
 
     return (
         <div className='section-plain desktop:pt-[70px] pt-[51px] py-[54px] px-[15%]'>
-            <div className='w-full flex flex-col desktop:flex-row'>
+            <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated w-full flex flex-col desktop:flex-row`}>
                 <img src={Star2} className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[15px] w-[9px] desktop:h-[18px] h-[10px] desktop:mt-[3%] mt-[10%] -ml-[5%] absolute'/>
                 <div className='desktop:w-[60%] w-full'>
                     <div className='desktop:w-[80%] w-full'>
