@@ -8,14 +8,17 @@ import { ReactComponent as Facebook } from '../assets/svg/Vector (6).svg'
 import { ReactComponent as Instagram } from '../assets/svg/mdi_instagram.svg'
 import { ReactComponent as Linkedin } from '../assets/svg/ri_linkedin-fill.svg'
 import Star from '../assets/img/sata gra2.png';
+import Star2 from '../assets/img/star.png';
+import Star3 from '../assets/img/star-opaque.png';
 
 export default function Footer() {
     const navigate = useNavigate()
     const location = useLocation()
 
     return (
-        <div className='section-plain desktop:pt-[70px] pt-[51px] py-[54px] px-[14.19%]'>
+        <div className='section-plain desktop:pt-[70px] pt-[51px] py-[54px] px-[15%]'>
             <div className='w-full flex flex-col desktop:flex-row'>
+                <img src={Star2} className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[15px] w-[9px] desktop:h-[18px] h-[10px] desktop:mt-[3%] mt-[10%] -ml-[5%] absolute'/>
                 <div className='desktop:w-[60%] w-full'>
                     <div className='desktop:w-[80%] w-full'>
                         <h1 onClick={() => navigate('/')} className='font-clash-display cursor-pointer text-[20px] mid:text-[30px] font-bold'>get<span className='text-secondary'>linked</span></h1>
@@ -77,6 +80,7 @@ export default function Footer() {
                     </div>
                     <div className='mt-16 desktop:mt-0'>
                         <h2 className='text-[14px] font-semibold text-secondary desktop:mb-[19px] mb-2'>Contact Us</h2>
+                        <img src={Star3} className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[15px] w-[7px] desktop:h-[18px] h-2 absolute desktop:-ml-[5%] ml-[30%]' />
                         <div className='flex flex-col gap-[22px]'>
                             <div className='flex gap-4'>
                                 <Phone />
@@ -93,7 +97,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='desktop:flex mt-[18px] hidden '>
+            <div className='desktop:flex mt-[18px] hidden'>
                 <div className='w-[60%]'>
                     <p className='flex text-[12px]'>Terms of Use<span className='mx-[10px] w-[2px] h-[17px] bg-secondary inline-block'></span>Privacy Policy</p>
                 </div>
@@ -106,6 +110,7 @@ export default function Footer() {
                         <Linkedin onClick={() => handleNavigation('https://www.linkedin.com/company/getlinked-ai/')}/>
                     </div>
                 </div>
+                <img src={Star2} className='animate__animated animate__flash animate__infinite animate__slower w-[15px] h-[18px]' />
             </div>
             <div className='mt-[67px] w-full flex flex-col items-center'>
                 <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[7px] h-2 desktop:w-auto desktop:h-auto' />
