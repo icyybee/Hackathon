@@ -10,6 +10,7 @@ import { ReactComponent as Vector } from '../assets/svg/Vector 4.svg'
 import Buttons from './button'
 import { useNavigate } from 'react-router-dom'
 import Countdown from './countdown'
+import Typed from 'react-typed';
 
 export default function Hero() {
     const navigate = useNavigate();
@@ -17,7 +18,15 @@ export default function Hero() {
     return (
         <div className='section-hero desktop:min-h-[110vh] min-h-auto border-bt'>
             <Navigation />
-            <h1 className='text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold desktop:mr-[55px] mr-[33px]'>Igniting a Revolution in HR Innovation</h1>
+            <Typed
+                strings={[
+                    'Igniting a Revolution in HR Innovation'
+                ]}
+                typeSpeed={40}
+                backSpeed={50}
+                className="w-full flex justify-end typed-header text-right mt-[31px] desktop:text-[36px] text-[16px] italic font-bold desktop:mr-[55px] mr-[33px]"
+                loop
+            />
             <div className='flex desktop:flex-row flex-col-reverse'>
                 <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[10px] desktop:h-8 h-3 ml-[182px] desktop:mt-0 mt-[18px]'/>
                 <div className='w-full flex justify-end'>
