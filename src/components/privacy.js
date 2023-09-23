@@ -4,11 +4,13 @@ import { ReactComponent as List } from '../assets/svg/list terms.svg'
 import Security from '../assets/img/08 1.png'
 import StarOpaque from '../assets/img/star-opaque.png'
 import StarPu from '../assets/img/star pu2.png'
+import Star from '../assets/img/sata gra.png'
+import Star2 from '../assets/img/star.png'
 import Buttons from './button'
 
 export default function Privacy() {
     return (
-        <div className='section privacy desktop:pt-[93px] pt-[43px] pb-[167px] px-[10.77%]'>
+        <div className='section privacy desktop:pt-[93px] pt-[43px] pb-[167px] px-[10%]'>
             <div className='w-full desktop:hidden flex justify-center'>
                 <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-2 h-8 object-contain'/>
             </div>
@@ -63,9 +65,25 @@ export default function Privacy() {
                     </div>
                 </div>
 
-                <div className='desktop:w-[43%] w-full h-full flex'>
+                <div className='desktop:w-[40%] w-full h-full flex'>
+                    <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[15px] h-[18px] absolute mt-[10%] right-[20%] animate__animated animate__flash animate__infinite animate__slower'/>
                     <Vector className='relative w-full h-full'/>
-                    <img src={Security} alt='security' className='absolute desktop:w-[559px] desktop:h-[749px] w-[70%] h-[70%] desktop:mt-[15%] mt-[30%] object-contain' />
+                    <div className='absolute'>
+                        <img src={Security} alt='security' className='desktop:w-full desktop:h-[749px] w-[70%] h-[70%] desktop:mt-[30%] mt-[30%] object-contain' />
+                        <div className='-mt-[10%]'>
+                            <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[15px] h-[18px]'/>
+                        </div>
+                        <div className='w-full -mt-[40%]'>
+                            <div className='flex justify-between'>
+                                <div className=''>
+                                    <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[15px] w-[9px] desktop:h-[18px] h-[10px]'/>
+                                </div>
+                                <div className=''>
+                                    <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-2 desktop:h-8 h-2'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
