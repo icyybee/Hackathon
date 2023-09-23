@@ -7,7 +7,6 @@ export default function Buttons(
         icon, 
         hoverText, 
         type, 
-        resWidth, 
         bgColor, 
         functions, 
         hoverColor, 
@@ -17,7 +16,6 @@ export default function Buttons(
         width, 
         weight, 
         size, 
-        smpadding
     }
 ) {
     return (
@@ -25,8 +23,6 @@ export default function Buttons(
             type={type}
             sx={
                 {
-                    // display: 'flex',
-                    // gap: '16px',
                     padding: padding ? padding : '16px 52px',
                     borderRadius: '4px',
                     textTransform: 'capitalize',
@@ -39,16 +35,10 @@ export default function Buttons(
                     height:'53px',
                     border: border,
                     transition: 'all 0.3s ease-in-out',
-                    // "@media (max-width:800px)": {
-                    //     padding: smpadding
-                    // },
-                    // "@media (max-width:600px)": {
-                    //     width: resWidth
-                    // },
-                    // "&:hover": {
-                    //   backgroundColor: hoverColor,
-                    //   color: hoverText,
-                    // }
+                    "&:hover": {
+                      opacity: '50%',
+                      color: hoverText,
+                    }
                 }
             }
             onClick={functions}
