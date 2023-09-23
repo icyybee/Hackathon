@@ -8,18 +8,18 @@ import Buttons from './button'
 export default function Success({ setSuccess }) {
     return (
         <div className='flex flex-col items-center'>
-            <div className='flex gap-[22px] items-center'>
-                <img src={StarOpaque} alt='star' className='w-[26px] h-8' />
-                <img src={Congratulation} alt='congrats' className='w-[403px] h-[297px]'/>
+            <div className='flex tab:gap-[22px] items-center'>
+                <img src={StarOpaque} alt='star' className='tab:w-[26px] w-[14px] tab:h-8 h-[18px]' />
+                <img src={Congratulation} alt='congrats' className='tab:w-[403px] w-full tab:h-[297px] h-full'/>
             </div>
-            <h1 className='text-center text-[32px] font-semibold mb-[10px]'>Congratulations <br />you have successfully Registered!</h1>
-            <div className='flex items-end gap-1 mb-4'>
-                <h2 className='text-[14px] font-semibold text-center'>Yes, it was easy and you did it! <br />check your mail box for next step</h2>
-                <img src={Smiley} alt='wink' className='w-5 h-5' />
+            <h1 className='text-center desktop:text-[32px] text-[16px] mt-[26px] desktop:mt-0 font-semibold desktop:mb-[10px] mb-[29px]'>Congratulations <br />you have successfully Registered!</h1>
+            <div className='flex items-end desktop:gap-1 desktop:mb-4 mb-[23px]'>
+                <h2 className='desktop:text-[14px] text-[12px] desktop:font-semibold font-medium text-center'>Yes, it was easy and you did it! <br />check your mail box for next step</h2>
+                <img src={Smiley} alt='wink' className='desktop:w-5 w-[14px] desktop:h-5 h-[14px]' />
             </div>
             <Buttons functions={() => setSuccess(false)} text={'Back'} width={'100%'} bgColor={'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)'} />
-            <div className='mt-2 flex justify-end w-full'>
-                <img src={Star} alt='star' />
+            <div className='desktop:mt-2 flex justify-end w-full'>
+                <img src={Star} alt='star' className='desktop:w-[21px] desktop:h-[25px] w-[11px] h-[13px] object-contain'/>
             </div>
         </div>
     )
