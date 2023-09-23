@@ -94,7 +94,7 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.32);
   backdrop-filter:saturate(180%) blur(20px);
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .nav-link {
