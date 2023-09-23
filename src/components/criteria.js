@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Attribute from '../assets/img/8046554 1.png'
 import Star from '../assets/img/star pu.png'
 import StarWhite from '../assets/img/star.png'
@@ -6,6 +7,17 @@ import StarOpaque from '../assets/img/star-opaque.png'
 import Buttons from './button'
 
 export default function Criteria() {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
+
     return (
         <div className='section border-bt'>
             <div className='flex w-full pl-[4.2%] desktop:pr-[7.7%] pr-[4.2%] desktop:pb-[120px] pb-[58.65px] desktop:pt-[75px] pt-[15px] flex-col desktop:flex-row'>
@@ -19,7 +31,7 @@ export default function Criteria() {
                     </div>
                     <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[26px] h-8 self-end hidden desktop:flex'/>
                 </div>
-                <div className='flex-1 desktop:ml-[53px]'>
+                <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated flex-1 desktop:ml-[53px]`}>
                     <h1 className='desktop:text-[32px] text-[20px] text-center desktop:text-start font-bold font-clash-display w-full desktop:w-[267px]'>Judging Criteria <br /><span className='text-secondary'>Key attributes</span></h1>
                     <div className='desktop:mt-[21px] mt-4 desktop:mb-[55px] mb-10 flex flex-col desktop:gap-[22px] gap-5'>
                         <p className='desktop:text-[14px] text-center desktop:text-start text-[12px]'><span className='font-bold desktop:text-[16px] text-[13px] text-tertiary'>Innovation and Creativity:</span> Evaluate the uniqueness and creativity of the

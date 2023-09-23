@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Star from '../assets/img/sata gra2.png'
 import Star2 from '../assets/img/star.png'
 import Liberty from '../assets/img/Liberty company logo white colour.png'
@@ -9,11 +10,24 @@ import Paybox from '../assets/img/Paybox.png'
 import Vizual from '../assets/img/Vizual Plus.png'
 
 export default function Sponsors() {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
+    
     return (
         <div className='section border-bt desktop:pt-[114px] pt-[41px] desktop:pb-[128px] pb-[104.41px] desktop:px-[8.3%] px-[43px]'>
             <div className='flex flex-col items-center'>
-                <h1 className='font-clash-display desktop:text-[32px] text-[20px] font-bold'>Partners and Sponsors</h1>
-                <h2 className='desktop:w-[452px] w-full desktop:mt-[22px] mt-[5px] desktop:text-[14px] text-[12px] text-center'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h2>
+                <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated w-full flex flex-col items-center`}>
+                    <h1 className='font-clash-display desktop:text-[32px] text-[20px] font-bold'>Partners and Sponsors</h1>
+                    <h2 className='desktop:w-[452px] w-full desktop:mt-[22px] mt-[5px] desktop:text-[14px] text-[12px] text-center'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h2>
+                </div>
                 <div className='w-full desktop:mt-[65px] mt-[41px] desktop:h-[560px] h-[148.58px] sponsor rounded-[5px] border border-secondary'>
                     <div className='desktop:pt-[100px] py-[38.21px] desktop:pb-[77px] flex flex-col items-center'>
                         <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[7px] h-[7px] desktop:w-auto desktop:h-auto desktop:mb-[19px] absolute desktop:static'/>

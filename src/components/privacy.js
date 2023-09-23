@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import { ReactComponent as Vector } from '../assets/svg/Vector (4).svg'
 import { ReactComponent as List } from '../assets/svg/list terms.svg'
 import Security from '../assets/img/08 1.png'
@@ -9,13 +10,24 @@ import Star2 from '../assets/img/star.png'
 import Buttons from './button'
 
 export default function Privacy() {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
+
     return (
         <div className='section privacy desktop:pt-[93px] pt-[43px] pb-[167px] px-[10%]'>
             <div className='w-full desktop:hidden flex justify-center'>
                 <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-2 h-8 object-contain'/>
             </div>
             <div className='flex desktop:gap-[60px] gap-12 flex-col desktop:flex-row hi'>
-                <div className='flex-1 desktop:mt-[60px] mt-5'>
+                <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated flex-1 desktop:mt-[60px] mt-5`}>
                     <div className='flex desktop:gap-[27px] text-center justify-center desktop:text-start desktop:justify-start'>
                         <h1 className='desktop:text-[32px] text-[20px] font-bold font-clash-display desktop:w-[300px]'>Privacy Policy and <br /><span className='text-secondary'>Terms</span></h1>
                         <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[26px] h-8 hidden desktop:block'/>

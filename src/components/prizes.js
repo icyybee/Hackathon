@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Star from '../assets/img/star.png'
 import Star2 from '../assets/img/star pu.png'
 import StarOpaque from '../assets/img/star-opaque.png'
@@ -8,12 +9,23 @@ import Gold from '../assets/img/gold_medal 1.png'
 import Bronze from '../assets/img/bronze_medal 1.png'
 
 export default function Prizes() {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
+
     return (
         <div className='section desktop:pt-[74px] pt-[46px] desktop:pb-[149px] pb-[31px] px-[8%]'>
             <div className='flex flex-col desktop:flex-row w-full gap-[37px]'>
                 <div className='flex-1 h-full flex flex-col desktop:gap-[150px] gap-[17px]'>
                     <img src={Star2} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[7px] desktop:h-8 h-[9px]'/>
-                    <div className='flex flex-col w-full items-center desktop:hidden text-center'>
+                    <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated flex flex-col w-full items-center desktop:hidden text-center`}>
                         <div className='flex'>
                             <div className='w-full'>
                                 <h1 className='text-[20px] font-bold font-clash-display'>Prizes and</h1> 
@@ -27,7 +39,7 @@ export default function Prizes() {
                 </div>
                 <div className='desktop:w-[55%] w-full'>
                     <div className='w-full'>
-                        <div className='desktop:flex flex-col w-full items-center hidden'>
+                        <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated desktop:flex flex-col w-full items-center hidden`}>
                             <div className='w-[401px]'>
                                 <h1 className='text-[32px] font-bold font-clash-display'>Prizes and</h1> 
                                 <span className='text-secondary text-[32px] font-bold font-clash-display mb-5'>Rewards</span>

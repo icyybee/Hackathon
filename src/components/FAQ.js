@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Manual from '../assets/img/cwok_casual_21 1.png'
 import Star from '../assets/img/star pu.png'
 import StarWhite from '../assets/img/star-opaque.png'
@@ -9,6 +10,17 @@ import { useLocation } from 'react-router-dom'
 
 export default function Faq() {
     const location = useLocation()
+
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
 
     useEffect(() => {
         if (location.hash) {
@@ -22,7 +34,7 @@ export default function Faq() {
     return (
         <div className='section-one border-bt'>
             <div className='flex flex-col desktop:flex-row w-full items-center desktop:pl-[13.54%] px-[47px] desktop:pr-[6.51%] desktop:pt-8 pt-[47px] pb-16' id='faq'>
-                <div className='flex-1 mt-10'>
+                <div className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated flex-1 mt-10`} ref={ref}>
                     <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[26px] w-[18px] desktop:h-8 h-[22px] desktop:-ml-6 desktop:mb-5'/>
                     <h1 className='desktop:text-[32px] text-[20px] font-bold font-clash-display desktop:w-[253px] text-center desktop:text-start'>Frequently Ask <br /><span className='text-secondary'>Question</span></h1>
                     <h2 className='desktop:mt-4 mt-[6px] desktop:w-[342px] desktop:text-[14px] text-[12px] w-full text-center desktop:text-start'>We got answers to the questions that you might want to ask about <span className='font-bold'>getlinked Hackathon 1.0</span></h2>

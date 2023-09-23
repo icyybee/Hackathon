@@ -1,10 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Idea from '../assets/img/the big idea 1.png'
 import Star from '../assets/img/sata gra.png'
 import { useLocation } from 'react-router-dom';
 
 export default function Overview() {
     const location = useLocation()
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
     
     useEffect(() => {
         if (location.hash) {
@@ -24,7 +35,7 @@ export default function Overview() {
                         <img src={Idea} alt='big idea' className='desktop:w-[490px] w-full h-full object-contain' />
                     </div>
                 </div>
-                <div className='desktop:flex-1 desktop:ml-[109px] w-full'>
+                <div className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated desktop:flex-1 desktop:ml-[109px] w-full`} ref={ref}>
                     <div className='flex items-center desktop:gap-[97px] gap-[18px]'>
                         <h1 className='desktop:text-[32px] text-[20px] font-bold font-clash-display desktop:w-[420px] w-full text-center desktop:text-start'>Introduction to getlinked <br /><span className='text-secondary'>tech Hackathon 1.0</span></h1>
                         <img src={Star} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[21px] w-2 desktop:h-[25px] h-[10px] absolute right-[16%] mt-[5%]'/>

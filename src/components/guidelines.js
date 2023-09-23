@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Manual from '../assets/img/7450159 1.png'
 import Star from '../assets/img/star-opaque.png'
 import Star2 from '../assets/img/star.png'
 
 export default function Guidelines() {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
+
     return (
         <div className='section border-bt'>
             <div className='flex flex-col-reverse desktop:flex-row items-center w-full px-12 desktop:pl-[11.6%] desktop:pr-[6.58%] desktop:py-1 pb-[19px]'>
-                <div className='flex-1 mt-[10px] desktop:mt-0'>
+                <div className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated flex-1 mt-[10px] desktop:mt-0`} ref={ref}>
                     <div className='flex flex-col desktop:flex-row desktop:gap-[88px]'>
                         <h1 className='text-center desktop:text-start desktop:text-[32px] text-[20px] font-bold font-clash-display desktop:w-[170px]'>Rules and <br /><span className='text-secondary'>Guidelines</span></h1>
                         <div className='w-full flex justify-end desktop:block'>

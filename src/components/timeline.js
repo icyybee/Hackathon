@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Star from '../assets/img/star pu.png'
 import Star2 from '../assets/img/star.png'
 import Star3 from '../assets/img/star-opaque.png'
@@ -6,6 +7,17 @@ import { useLocation } from 'react-router-dom';
 
 export default function Timeline() {
     const location = useLocation()
+
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+    });
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+          setScrollY(true);
+        }
+    }, [inView]);
 
     useEffect(() => {
         if (location.hash) {
@@ -18,7 +30,7 @@ export default function Timeline() {
 
     return (
         <div className='section-plain'>
-            <div className='pt-[72px] w-full desktop:px-[8.96%] px-[49px] desktop:pb-[109px] pb-[34px]' id='timeline'>
+            <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated pt-[72px] w-full desktop:px-[8.96%] px-[49px] desktop:pb-[109px] pb-[34px]`} id='timeline'>
                 <div className='text-center w-full items-center flex flex-col'>
                     <h1 className='text-[20px] desktop:text-[32px] font-bold font-clash-display desktop:mb-3 mb-[21px]'>Timeline</h1>
                     <h2 className='text-[14px] w-[346px]'>Here is the breakdown of the time we anticipate using for the upcoming event.</h2>
