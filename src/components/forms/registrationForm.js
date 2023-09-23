@@ -152,7 +152,7 @@ export default function RegistrationForm({ setSuccess, success }) {
             </div>
             <div className='flex desktop:gap-8 gap-[19px] mt-[29px] w-full'>
                 <SelectInput 
-                    width={'[70%]'}
+                    width={'[60%]'}
                     label={'Category'} 
                     placeholder={'Select your category'} 
                     name={'category'} 
@@ -183,7 +183,7 @@ export default function RegistrationForm({ setSuccess, success }) {
             <div className='flex gap-[10px] items-center desktop:mb-[22px] mb-[14px]'>
                 <input 
                     type='checkbox' 
-                    className='w-[14px] h-[14px]' 
+                    className='desktop:w-[14px] desktop:h-[14px] w-3 h-3' 
                     name='privacy_poclicy_accepted'
                     value={registrationData.privacy_poclicy_accepted} 
                     onChange={(e) => {

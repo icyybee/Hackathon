@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Registration() {
     const navigate = useNavigate()
-    const [success, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(true);
     
     return (
         <motion.div

@@ -210,6 +210,10 @@ select {
   padding: 13px 29px 14px 29px;
 }
 
+select:focus {
+  outline: none;
+}
+
 textarea {
   height: 119px;
   border-radius: 4px;
