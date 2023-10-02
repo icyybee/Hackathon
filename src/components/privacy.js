@@ -22,7 +22,7 @@ export default function Privacy() {
     }, [inView]);
 
     return (
-        <div className='section privacy desktop:pt-[93px] pt-[43px] pb-[167px] px-[10%]'>
+        <div className='section privacy desktop:pt-[93px] pt-[43px] pb-[128px] px-[10%]'>
             <div className='w-full desktop:hidden flex justify-center'>
                 <img src={StarOpaque} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-2 h-8 object-contain'/>
             </div>

@@ -46,8 +46,8 @@ export default function Registration() {
                             <div className='desktop:mt-[33px] flex gap-[7px] items-center'>
                                 <h2 className='desktop:text-[14px] text-[12px]'>Be part of this movement!</h2>
                                 <div className='flex walk -mt-5'>
-                                    <img src={Girl} alt='walkingirl' className='desktop:w-[26px] w-[22.94px] desktop:h-[26px] h-[22.94px]' />
-                                    <img src={GuyWalk} alt='walkinguy' className='desktop:w-[30px] w-[26.47px] desktop:h-[30px] h-[26.47px]'/>
+                                    <img src={Girl} alt='walkingirl' className='animate__animated animate__fadeInLeft animate__slower animate__infinite desktop:w-[26px] w-[22.94px] desktop:h-[26px] h-[22.94px]' />
+                                    <img src={GuyWalk} alt='walkinguy' className='animate__animated animate__fadeInLeft animate__slower animate__infinite desktop:w-[30px] w-[26.47px] desktop:h-[30px] h-[26.47px]'/>
                                 </div>
                             </div>
                             <h1 className='desktop:mt-[19px] desktop:text-[24px] text-[20px]'>CREATE YOUR ACCOUNT</h1>
