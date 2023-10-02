@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { calculateTimeRemaining } from '../library/helperFunction';
 
 export default function Countdown() {
-    const targetDate = new Date('2023-09-26T00:00:00');
+    const targetDate = new Date('2023-10-26T00:00:00');
     const [remainingTime, setRemainingTime] = useState(calculateTimeRemaining(targetDate));
 
     useEffect(() => {
