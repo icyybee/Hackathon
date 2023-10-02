@@ -40,12 +40,12 @@ export default function Faq() {
                     <h2 className='desktop:mt-4 mt-[6px] desktop:w-[342px] desktop:text-[14px] text-[12px] w-full text-center desktop:text-start'>We got answers to the questions that you might want to ask about <span className='font-bold'>getlinked Hackathon 1.0</span></h2>
                     <div className='flex flex-col desktop:flex-row desktop:gap-12'>
                         <div className='desktop:mt-[68px] mt-[45.69px] flex flex-col gap-[13.39px] desktop:gap-[25px] desktop:w-[427px] w-full'>
-                            <Frequent title={'Can I work on a project I started before the hackathon?'}/>
-                            <Frequent title={'What happens if I need help during the hackathon?'}/>
-                            <Frequent title={"What happens if I don't have an idea for a project?"}/>
-                            <Frequent title={'Can I join a team or do I have to come with one?'}/>
-                            <Frequent title={'What happens after the hackathon ends'}/>
-                            <Frequent title={'Can I work on a project I started before the hackathon?'}/>
+                            <Frequent title={'Can I work on a project I started before the hackathon?'} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod laboris nisi ut aliquip ex ea commodo consequat. Duis aute proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
+                            <Frequent title={'What happens if I need help during the hackathon?'} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod laboris nisi ut aliquip ex ea commodo consequat. Duis aute proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
+                            <Frequent title={"What happens if I don't have an idea for a project?"} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod laboris nisi ut aliquip ex ea commodo consequat. Duis aute proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
+                            <Frequent title={'Can I join a team or do I have to come with one?'} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod laboris nisi ut aliquip ex ea commodo consequat. Duis aute proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
+                            <Frequent title={'What happens after the hackathon ends'} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod laboris nisi ut aliquip ex ea commodo consequat. Duis aute proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
+                            <Frequent title={'Can I work on a project I started before the hackathon?'} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod laboris nisi ut aliquip ex ea commodo consequat. Duis aute proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
                         </div>
                         <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower desktop:block hidden w-[26px] h-8 ml-[10%] mt-[27%]'/>
                     </div>
@@ -63,7 +63,7 @@ export default function Faq() {
                         </div>
                     </div>
                     <div className='flex flex-col desktop:gap-8 w-full'>
-                        <img src={Manual} alt='manual' className='w-full h-full object-contain' />
+                        <img src={Manual} alt='manual' className='w-full h-full object-contain animate__animated animate__pulse animate__infinite animate__slower' />
                         <div className='desktop:hidden block absolute mt-[50%]'>
                             <img src={StarWhite} alt='star' className='animate__animated animate__flash animate__infinite animate__slower w-[10px] h-3'/>
                         </div>

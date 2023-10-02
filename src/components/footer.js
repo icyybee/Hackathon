@@ -27,7 +27,7 @@ export default function Footer() {
     }, [inView]);
 
     return (
-        <div className='section-plain desktop:pt-[70px] pt-[51px] py-[54px] px-[15%]'>
+        <div className='section-plain desktop:pt-[70px] desktop:pb-[54px] pb-5 px-[15%]'>
             <div ref={ref} className={`${scrollY ? 'animate__slideInUp' : ''} animate__animated w-full flex flex-col desktop:flex-row`}>
                 <img src={Star2} className='animate__animated animate__flash animate__infinite animate__slower desktop:w-[15px] w-[9px] desktop:h-[18px] h-[10px] desktop:mt-[3%] mt-[10%] -ml-[5%] absolute'/>
                 <div className='desktop:w-[60%] w-full'>
